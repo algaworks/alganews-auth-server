@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sucesso</title>
+  <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+<div class="login-wrapper">
+  <div class="login-box">
+    <div class="login-box--header">
+      <h1>Sucesso!</h1>
+    </div>
+    <div class="login-box--content">
+      <div class="login-box--content">
+        <p style="text-align: center; " th:text="${msg}">Sucesso.</p>
+      </div>
+      <a th:href="@{/login}">
+        Voltar
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

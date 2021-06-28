@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+* {
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Lato, sans-serif;
+}
+
+.login-wrapper {
+  height: 100vh;
+  background-color: rgb(242, 242, 242);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  width: 370px;
+  background-color: #ffffff;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.login-box--header {
+  padding: 16px 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.login-box--content {
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+label span {
+  margin-bottom: 8px;
+}
+
+label input {
+  border: 1px solid #eee;
+  padding: 8px;
+}
+
+label input:hover {
+  border-color: #ccc;
+}
+
+label input:focus {
+  border-color: #0099ff;
+  outline: none;
+}
+
+label.error input {
+  border-color: #f20;
+  position: relative;
+}
+
+label.error::after {
+  display: block;
+  content: ' ';
+  font-size: 14px;
+  height: 20px;
+  width: 100%;
+}
+
+label.error::after {
+  content: attr(data-error);
+  color: #f20;
+}
+
+.submit {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submit > *:not(:last-child) {
+  margin-right: 8px;
+}
+
+button {
+  padding: 8px;
+  border-radius: 3px;
+  
+  background-color: #0099ff;
+  color: #ffffff;
+  border: 1px solid #0099ff;
+
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+button:hover:not(:disabled),
+button:focus:not(:disabled) {
+  outline: none;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 4px rgba(0, 153, 255, 0.5);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  border-color: #ccc;
+}
+
+a {
+  padding: 8px;
+  color: #0099ff;
+  cursor: pointer;
+  text-decoration: none;
+}

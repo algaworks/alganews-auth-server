@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+<div class="login-wrapper">
+	<div class="login-box">
+		<div class="login-box--header">
+			<h1>Login</h1>
+		</div>
+		<div class="login-box--content">
+			<form autocomplete="off" th:action="@{/login}" method="post">
+				<p style="text-align: center; margin-bottom: 10px; color: red;" th:if="${#bools.isTrue(param.error)}">
+					O e-mail ou senha não confere
+				</p>
+				<label for="email">
+					<span>E-mail</span>
+					<input id="email" name="username" type="email" placeholder="ex.: joao.silva@alganews.com" required>
+				</label>
+				<label for="password">
+					<span>Senha</span>
+					<input id="password" name="password" type="password" required>
+				</label>
+				<div class="submit">
+					<a th:href="@{/forget-password}">
+						Esqueci a senha
+					</a>
+					<button>
+						Fazer login
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>
